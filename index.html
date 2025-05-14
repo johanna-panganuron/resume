@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="resume-icon.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .sidebar {
+            background-color: #1a1a1a;
+            color: #d9d9d9;
+            padding: 30px;
+        }
+
+        .main-content {
+            padding: 30px;
+            background-color: #f8f8f8;
+        }
+
+        .name-title {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #c4a56a;
+            padding-bottom: 20px;
+        }
+
+        .name-title h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #c4a56a;
+            letter-spacing: 1px;
+        }
+
+        .name-title h2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #d9d9d9;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #8b6e3d;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 20px;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 30px;
+            width: 40px;
+            height: 2px;
+            background-color: #c4a56a;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #c4a56a;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: #c4a56a;
+            text-align: center;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .item-title i {
+            color: #8b6e3d;
+        }
+
+        .item-period {
+            color: #8b6e3d;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #8b6e3d;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        li:before {
+            content: "▹";
+            color: #c4a56a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section-title {
+                justify-content: center;
+            }
+
+            .section-title:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <div class="sidebar">
+            <div class="name-title">
+                <h1 id="your-name">JUWANA</h1>
+                <h2>Applicant Para Maging Darling Mo</h2>
+            </div>
+
+            <!-- Replace with your actual photo -->
+            <img class="profile-pic" src="me.jpeg" alt="My Photo">
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-address-card"></i> Contact</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 09945452327</p>
+                    <p><i class="fas fa-envelope"></i> crush.tika@forever.com</p>
+                    <p><i class="fas fa-globe"></i> www.ikawragyud.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sa Imong Heart Catarman, Cordova, Cebu</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-star"></i> Special Skills</h3>
+                <div class="skills">
+                    <span class="skill"><i class="fas fa-heart"></i> Pagmamahal</span>
+                    <span class="skill"><i class="fas fa-hands-helping"></i> Pag-aalaga</span>
+                    <span class="skill"><i class="fas fa-laugh-squint"></i> Pagpapatawa</span>
+                    <span class="skill"><i class="fas fa-brain"></i> Pag-intindi</span>
+                    <span class="skill"><i class="fas fa-user-shield"></i> Loyalty</span>
+                    <span class="skill"><i class="fas fa-kiss-wink-heart"></i> Pagiging sweet</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-language"></i> Languages</h3>
+                <div class="language-item"><i class="fas fa-check-circle"></i> Bisaya</div>
+                <div class="language-item"><i class="fas fa-check-circle"></i> Tagalog</div>
+                <div class="language-item"><i class="fas fa-check-circle"></i> English</div>
+                <div class="language-item"><i class="fas fa-check-circle"></i> All Love Languages</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-user"></i> About Me</h3>
+                <p>Ako diay si Juwana... Juwana be mine or magpa-schedule pa ka ug interview?</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-award"></i> Qualifications</h3>
+                <ul>
+                    <li>100% loyal, dili mag-"if statement" sa uban, "else" lang sa imo</li>
+                    <li>Puwede ko mag-assign tasks, as long as ang task kay "make you smile"</li>
+                    <li>Master sa pagkuha og candid shots, pero ikaw ra ang subject sa akong camera</li>
+                    <li>Mo-bisikleta ko padulong sa imong heart, kay wala ko'y sakyanan</li>
+                    <li>Can listen to you rant for hours, just like an endless loading screen</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-briefcase"></i> Experience</h3>
+
+                <div class="item">
+                    <div class="item-period"><i class="far fa-calendar-alt"></i> January 07, 2025 - Present</div>
+                    <div class="item-title"><i class="fas fa-heartbeat"></i> Part-time Admirer</div>
+                    <ul>
+                        <li>Kasamtangan nag-apply as imong "future darling" pero naghulat pa ko og interview.</li>
+                        <li>Specialized sa pagtan-aw nimo ngano gwapa kayka.</li>
+                        <li>5-star rating sa "silent admirer nimo".</li>
+                        <li>Unlimited supply of kilig, pero walay sweldo, kay free ra man ang paghigugma nako nimo.</li>
+                        <li>Wala pa ko na-hired, pero permi ko magpabilin sa imong "heart waiting list".</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+
+
+
+                <div class="item">
+                    <div class="item-period"><i class="far fa-calendar-alt"></i> 2022 - Present</div>
+                    <div class="item-title"><i class="fas fa-laptop-code"></i> BSIT - Bachelor of Stalk sa Imong
+                        Timeline</div>
+                    <p>Cordova Public College</p>
+                    <ul>
+                        <li>Specialization: “Front-end development sa imong mga smiles”</li>
+                        <li>Certified in: “SQL – Sige Q’g Lantaw nimo”</li>
+                        <li>Capstone: “CrushOS – ang Operating System nga naa lang gyud para nimo”</li>
+                        <li>Minor: “Memory Allocation – 99% sa huna-huna, ikaw”</li>
+                        <li>Achievements: Na-loop sa imong smile, walay break, walay exit condition</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-users"></i> References</h3>
+
+                <div class="item">
+                    <div class="item-title"><i class="fas fa-heart"></i> Akong Kasingkasing</div>
+                    <p><i class="fas fa-quote-left"></i> "Grabe ka consistent niya mo-love, promise! Murag robot!" <i
+                            class="fas fa-quote-right"></i></p>
+                    <p><i class="fas fa-heartbeat"></i> Contact: Pinaagi ra sa imong gugma</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title"><i class="fas fa-brain"></i> Akong Utok</div>
+                    <p><i class="fas fa-quote-left"></i> "Giatay! Ikaw ra gyud permi niya gihunahuna, samok kaayo!" <i
+                            class="fas fa-quote-right"></i></p>
+                    <p><i class="fas fa-heart"></i> Contact: Pinaagi sa telepathy (free data)</p>
+                </div>
+
+                <div class="item">
+                    <div class="item-title"><i class="fas fa-database"></i> MySQL Server</div>
+                    <p><i class="fas fa-quote-left"></i> "Her `SELECT * FROM memories WHERE person='you'` query never
+                        returns empty" <i class="fas fa-quote-right"></i></p>
+                    <p><i class="fas fa-table"></i> Contact: JOIN hearts ON you.id = me.crush_id</p>
+                </div>
+            </div>
+
+            <script>
+                // Simple animation for fun
+                document.getElementById('your-name').addEventListener('click', function () {
+                    this.style.color = '#8b6e3d';
+                    setTimeout(() => {
+                        this.style.color = '#c4a56a';
+                    }, 1000);
+                });
+            </script>
+</body>
+
+</html>
